@@ -1,0 +1,301 @@
+/*mobile first approach--mobile styles*/
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  @font-face {
+	font-family: 'Museo Sans';
+	src: url(../fonts/museosans-cond-300.eot);
+	src: url(../fonts/museosans-cond-300.eot?#iefix) format("embedded-opentype"), url(../fonts/museosans-cond-300.woff) format("woff"), url(../fonts/museosans-cond-300.ttf) format("opentype");
+	font-weight: 400;
+	font-style: normal
+}
+@font-face {
+	font-family: 'Museo Sans';
+	src: url(../fonts/museosans-cond-italic-300.eot);
+	src: url(../fonts/museosans-cond-italic-300.eot?#iefix) format("embedded-opentype"), url(../fonts/museosans-cond-italic-300.woff) format("woff"), url(../fonts/museosans-cond-italic-300.ttf) format("opentype");
+	font-weight: 400;
+	font-style: italic
+}
+
+body{
+    
+    font-family:"Museo Sans",Arial,Helvetica,Verdana,sans-serif;
+    color: #535252;
+    height: 100%;
+    background-color: #d9e8f0;
+    font-size: 20px;
+    position: relative;
+    margin:10px;    
+}
+.container{
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+}
+header{
+    padding-top: 5px;
+    text-align: center;
+    margin: 10px auto;
+    max-width: 400px;
+    border-bottom: 1px dotted #535252;
+}
+header h2{
+    font-size: 25px;
+}
+.font-normal{
+    font-weight:normal;
+}
+.kiwico-features{
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex; /* Safari 6.1+ */
+    flex-flow:row wrap; /*flex-direction flex-wrap*/
+    -webkit-flex-flow:row wrap; /* Safari 6.1+ */
+    justify-content: center;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+}
+.kiwico-features .kiwico-item{
+    align-self: center;
+    background-color: white;
+    color: #33cccc;
+    padding:5px 10px;
+    margin:5px;
+    box-shadow:1px 1px 4px gray;
+    border-radius: 8px;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex; /* Safari 6.1+ */
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    cursor: pointer;
+}
+.kiwico-item.f-con,.kiwico-item.f-sc,.kiwico-item.f-ft{
+    transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+}
+.kiwico-item.f-edu,.kiwico-item.f-fun,.kiwico-item.f-ast{
+    transform: rotate(1deg);
+    -webkit-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+}
+.kiwico-features .kiwico-item:hover,.kiwico-features .kiwico-item.selected{
+    background-color: #33cccc;
+    color:#ffffff;
+    transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+    -webkit-transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+    -ms-transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+.kiwico-item span{
+    text-align: center;
+}
+.kiwico-item span.bg:before{
+    content:"";
+    background: url("http://icdn.kiwicrate.com/site/home/why-kiwico-sprite.png") no-repeat;
+    display: block;
+    position: relative;
+    top:-6px;
+    transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+}
+.kiwico-item.f-con span.bg{
+    height: 20px;
+}
+.kiwico-item.f-con span.bg:before{
+    background-position: 0 0;    
+    width: 68px;
+    height:35px;
+}
+.kiwico-item.f-sc span.bg{
+    height: 30px;
+}
+.kiwico-item.f-sc span.bg:before{
+    background-position: -67px 0;
+    width: 55px;
+    height: 50px;
+}
+.kiwico-item.f-edu span.bg{
+    height: 22px;
+}
+.kiwico-item.f-edu span.bg:before{
+    background-position: -117px 0;
+    width: 60px;
+    height: 40px;
+}
+.kiwico-item.f-ft span.bg{
+    height: 21px;
+}
+.kiwico-item.f-ft span.bg:before{
+    background-position: -180px 0;
+    width: 70px;
+    height: 35px;
+}
+.kiwico-item.f-fun span.bg{
+    height: 21px;
+}
+.kiwico-item.f-fun span.bg:before{
+    background-position: -316px 0;
+    width: 40px;
+    height: 35px;
+}
+.kiwico-item.f-ast span.bg{
+    height: 27px;
+}
+.kiwico-item.f-ast span.bg:before{
+    background-position: -248px 0;
+    width: 70px;
+    height: 43px;
+}
+.kiwico-item:hover span.bg:before,.kiwico-item.selected span.bg:before{
+    background-position-y: -45px;
+    transition: background-position linear 0.2s;
+    -webkit-transition: background-position linear 0.2s;
+    -moz-transition: background-position linear 0.2s;
+    -ms-transition: background-position linear 0.2s;
+}
+.item-desc{
+    order:7;
+    opacity: 0;
+    height: 0;   
+    font-style: italic;
+    margin:0;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    position: relative;    
+}
+.item-desc.selected{
+    opacity:1;
+    margin:30px 5px 5px 5px;
+    height: auto;
+    transition:opacity ease-in-out 0.6s;
+    -webkit-transition:opacity ease-in-out 0.6s;
+    -ms-transition:opacity ease-in-out 0.6s;
+    -moz-transition:opacity ease-in-out 0.6s;
+}
+.item-desc:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 23px;
+	margin-left: -23px;
+}
+.item-desc p{
+    margin:0;
+    padding:20px 38px;
+    text-align: center;  
+    line-height: 22px; 
+}
+.item-desc .img{
+  display: none;
+}
+.f-edu.item-desc .edu-fact{
+    display: none;
+}
+.mobile-hide{
+    display: none;
+}
+/*desktop styles*/
+
+@media only screen and (min-width: 768px) {
+
+.kiwico-features .kiwico-item{
+    margin:10px;
+}    
+.item-desc{
+    border-radius: 0;
+}
+.item-desc:after{
+    display: none;
+}
+.item-desc:before{
+    content: "";
+    display: block;
+    top: -20px;
+    width: 100%;    
+    position: absolute;
+}
+.f-con.item-desc:before{
+    background: url("http://icdn.kiwicrate.com/site/home/why-kiwico-convenient.png") no-repeat;
+    max-width: 225px;       
+    height: 225px; 
+    background-size: 85%;
+    transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    -ms-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+}
+
+.f-edu.item-desc .edu-fact{
+    top: -26px;
+    width: 100%;    
+    position: absolute;
+    display: block;
+    background-color: rgba(255, 179, 102, 0.2);
+   /* background: url("http://icdn.kiwicrate.com/site/home/why-kiwico-educational.jpg") no-repeat;*/
+    max-width: 235px;
+    height: 235px;
+    left: 10px;
+    z-index: 1;
+    border-radius: 50%;
+}
+.edu-fact svg textPath{
+    font-size: 23px;
+    font-weight: bold;
+    color: #ff8c1a;
+    /* font-family: serif; */
+    font-style: normal;
+}
+.f-edu.item-desc .edu-fact p{
+    margin: 0;
+    padding: 10px 40px;
+    font-size: 17px;
+    font-style: normal;
+}
+.f-con.item-desc p{
+    margin-left: 190px;  
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+.f-edu.item-desc p{
+    margin-left: 232px;
+    padding: 40px 38px 40px 20px;
+}
+.item-desc span{
+    font-size: 14px;
+    margin-left: 190px;
+    padding: 0 20px 20px 20px;    
+    text-align: left;
+}
+.item-desc.f-ast span{
+    margin-left: 0;
+    padding-left: 38px;
+}
+.mobile-hide{
+    display: block;
+}
+}
